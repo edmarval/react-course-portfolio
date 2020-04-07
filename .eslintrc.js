@@ -12,6 +12,7 @@ module.exports = {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly",
   },
+  //   parser: "babel-eslint",
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -25,6 +26,6 @@ module.exports = {
     "linebreak-style": ["error", "unix"],
     quotes: ["error", "double"],
     semi: ["error", "always"],
-    // "react/state-in-constructor": "off",
+    "react/state-in-constructor": "off",
   },
 };
