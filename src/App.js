@@ -1,26 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import "./App.scss";
+import * as styles from "./App.module.scss";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import avatar from "./assets/eduardo.jpg";
+
+import { Header } from "./components";
+
+class App extends React.Component {
+  state = {
+    factVisible: false,
+  };
+
+  render() {
+    return (
+      <main>
+        <Header />
+        <div className={styles.container}>
+          <section>
+            <h1> Eduardo Marval</h1>
+            <h2> Squad Lead AND Geek Dancer</h2>
+            <span>This is some text that I need to add some more to it</span>
+            <button onClick={this.shouldHide}> Show Interesting Facts</button>
+            {this.state.factVisible ? (
+              <ol>
+                Interesting Facts:
+                <li> Apart from my normal job, have my own dance academy</li>
+                <li>Love Squash</li>
+                <li>another Text</li>
+              </ol>
+            ) : null}
+          </section>
+          <img src={avatar} alt="Eduardo's picture" />
+        </div>
+      </main>
+    );
+  }
+
+  shouldHide = () => {
+    this.setState((currentState) => {
+      return {
+        factVisible: !currentState.factVisible,
+      };
+    });
+
+    console.log(this.state.factVisible);
+  };
 }
 
 export default App;

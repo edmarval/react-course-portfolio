@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  background-color: #333333;
+  color: #e6e6e6;
+  // flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 30px;
+
+  &__title {
+    font-weight: bold;
+    font-size: larger;
+  }
+
+  a {
+    margin: 10px;
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  .nav_links {
+    display: flex;
+    list-style: none;
+    li {
+      margin: 10px;
+    }
+  }
+}
