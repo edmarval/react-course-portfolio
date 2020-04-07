@@ -1,8 +1,8 @@
 import React from "react";
 // import "./App.scss";
-import * as styles from "./App.module.scss";
+// import * as styles from "./App.module.scss";
 
-import avatar from "./assets/eduardo.jpg";
+// import avatar from "./assets/eduardo.jpg";
 
 import { Header } from "./components";
 
