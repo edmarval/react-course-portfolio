@@ -12,7 +12,7 @@ class Header extends React.Component {
         <nav>
           <ul className={styles.nav_links}>
             <a href="/">About</a>
-            <a href="/">Skills</a>
+            <a href="/skills">Skills</a>
             <a href="/">Contact</a>
           </ul>
         </nav>
