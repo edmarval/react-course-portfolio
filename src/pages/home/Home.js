@@ -32,6 +32,16 @@ class Home extends React.Component {
       </React.Fragment>
     );
   }
+
+  shouldHide = () => {
+    this.setState((currentState) => {
+      return {
+        factVisible: !currentState.factVisible,
+      };
+    });
+
+    console.log(this.state.factVisible);
+  };
 }
 
 export default Home;

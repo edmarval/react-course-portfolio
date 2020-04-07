@@ -6,7 +6,7 @@ import React from "react";
 
 import { Header } from "./components";
 
-import { Home, Skills } from "./pages";
+import { Home, Skills, Contact } from "./pages";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -22,20 +22,11 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/skills" component={Skills} />
+          <Route exact path="/contact" component={Contact} />
         </Switch>
       </Router>
     );
   }
-
-  shouldHide = () => {
-    this.setState((currentState) => {
-      return {
-        factVisible: !currentState.factVisible,
-      };
-    });
-
-    console.log(this.state.factVisible);
-  };
 }
 
 export default App;
