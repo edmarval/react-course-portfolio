@@ -14,6 +14,7 @@ class App extends React.Component {
   render() {
     return (
       <main>
+        <div></div>
         <Header />
         <div className={styles.container}>
           <section>
